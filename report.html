@@ -25095,7 +25095,8 @@ The percentage of the first 100 images in dog_files is 100.0 %
 <p>We have imported some Python modules to get you started, but feel free to import as many modules as you need.  If you end up getting stuck, here's a hint that specifies a model that trains relatively fast on CPU and attains &gt;1% test accuracy in 5 epochs:</p>
 <p><img src="images/sample_cnn.png" alt="Sample CNN"></p>
 <p><strong>Question 4:</strong> Outline the steps you took to get to your final CNN architecture and your reasoning at each step.  If you chose to use the hinted architecture above, describe why you think that CNN architecture should work well for the image classification task.</p>
-<p><strong>Answer:</strong></p>
+<p><strong>Answer:</strong> I tried to build this model architure which looks like VGG16 network. And because the full vgg16 net is too large and takes a long time to train, so I reduce filters in each cnn layers. Then is still hard and takes a long time to training. Finally, I tried to add batch normalization layers to normalize the weights in each convolutional layers to reduce training time.
+ The reason why the CNN architecture works well: When we get an image , it always has a high lengths and widths and it always contains a lot of information which is hard to discribe and recognize by computer. After passing throuth a bunch of convolutional layers, its length and width become very small but large heights which have a lot of information and easy too detect. that why the model architure works.</p>
 
 </div>
 </div>
